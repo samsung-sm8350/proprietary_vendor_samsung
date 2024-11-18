@@ -8,6 +8,23 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+	name: "libkeymaster_helper",
+	owner: "samsung",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libkeymaster_helper.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libskeymaster4device",
 	owner: "samsung",
 	strip: {
@@ -71,6 +88,13 @@ android_app_import {
 }
 
 dex_import {
+	name: "uimservicelibrary",
+	owner: "samsung",
+	jars: ["proprietary/product/framework/uimservicelibrary.jar"],
+	product_specific: true,
+}
+
+dex_import {
 	name: "audiosphere",
 	owner: "samsung",
 	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
@@ -112,11 +136,29 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "vendor.samsung.hardware.thermal@1.0-manifest.xml",
+	name: "vendor.qti.diag.hal.service.xml",
 	owner: "samsung",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+cc_prebuilt_binary {
+	name: "android.hardware.keymaster@4.0-strongbox-service-qti",
+	owner: "samsung",
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	strip: {
+		none: true,
+	},
+	prefer: true,
+	relative_install_path: "hw",
 	soc_specific: true,
 }
 

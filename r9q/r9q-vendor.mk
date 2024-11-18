@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/r9q
 
 PRODUCT_COPY_FILES += \
+    vendor/samsung/r9q/proprietary/system/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.camera.provider-V1-ndk.so \
     vendor/samsung/r9q/proprietary/vendor/bin/hw/nxp.android.hardware.nfc@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/nxp.android.hardware.nfc@1.2-service \
     vendor/samsung/r9q/proprietary/vendor/etc/audconf/OPEN/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/audconf/OPEN/Bluetooth_cal.acdb \
     vendor/samsung/r9q/proprietary/vendor/etc/audconf/OPEN/General_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/audconf/OPEN/General_cal.acdb \
@@ -18,6 +19,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/r9q/proprietary/vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nxp.android.hardware.nfc@1.2-service.rc \
     vendor/samsung/r9q/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     vendor/samsung/r9q/proprietary/vendor/etc/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc/libnfc-nxp_RF.conf \
+    vendor/samsung/r9q/proprietary/vendor/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.android.hardware.camera.preview-dis.back.xml \
+    vendor/samsung/r9q/proprietary/vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.dlc \
+    vendor/samsung/r9q/proprietary/vendor/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.info:$(TARGET_COPY_OUT_VENDOR)/etc/portrait_data/LF_segmenter/LF_segmenter_cnn.info \
+    vendor/samsung/r9q/proprietary/vendor/etc/portrait_data/SRIB_HumanSegVideo_INT8_V102_sm8350_snpe1500_vendor.dlc:$(TARGET_COPY_OUT_VENDOR)/etc/portrait_data/SRIB_HumanSegVideo_INT8_V102_sm8350_snpe1500_vendor.dlc \
+    vendor/samsung/r9q/proprietary/vendor/etc/portrait_data/single_bokeh_feature_vendor.json:$(TARGET_COPY_OUT_VENDOR)/etc/portrait_data/single_bokeh_feature_vendor.json \
     vendor/samsung/r9q/proprietary/vendor/etc/qdcm_calib_data_ss_dsi_panel_EA8082_AMB641ZR01_FHD.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ss_dsi_panel_EA8082_AMB641ZR01_FHD.xml \
     vendor/samsung/r9q/proprietary/vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3FC3_AMB641ZR02_FHD.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ss_dsi_panel_S6E3FC3_AMB641ZR02_FHD.xml \
     vendor/samsung/r9q/proprietary/vendor/etc/sensors/config/lahaina_ak991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_ak991x_0.json \
@@ -32,17 +38,145 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/r9q/proprietary/vendor/etc/sensors/config/lahaina_lsm6dso_0_5.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_lsm6dso_0_5.json \
     vendor/samsung/r9q/proprietary/vendor/etc/sensors/config/lahaina_stk3a9x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lahaina_stk3a9x_0.json \
     vendor/samsung/r9q/proprietary/vendor/etc/sensors/config/lsm6dso_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/lsm6dso_0.json \
+    vendor/samsung/r9q/proprietary/vendor/etc/str/str_preference_data.dat:$(TARGET_COPY_OUT_VENDOR)/etc/str/str_preference_data.dat \
+    vendor/samsung/r9q/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
+    vendor/samsung/r9q/proprietary/vendor/firmware/CAMERA_ICP_170.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP_170.elf \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-bot-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-bot-dsp1-spk-prot.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-bot-dsp1-spk-prot.wmfw \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-rcv-dsp1-spk-prot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-rcv-dsp1-spk-prot.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l20.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l20.bin \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l20.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l20.wmfw \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l25a.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a.wmfw \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l25a_cal.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_cal.wmfw \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l25a_clab.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_clab.bin \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l25a_clab.wmfw:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_clab.wmfw \
+    vendor/samsung/r9q/proprietary/vendor/firmware/cs40l25a_exc.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cs40l25a_exc.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/dax_param.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/dax_param.bin \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b00 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b05 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b06 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b07 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b08 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b09 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b10 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b11 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b12 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b13 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b14 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b15 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b16 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b17 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b18 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.b19 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass-lt.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass-lt.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b01 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b05 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b06 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b07 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b08 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b09 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b10 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b11 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b12 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b13 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b14 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b15 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b16 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b17 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b18 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.b19 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/evass.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/evass.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b00 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b01 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.elf \
+    vendor/samsung/r9q/proprietary/vendor/firmware/ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/mfc/mfc_fw_flash.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc/mfc_fw_flash.bin \
+    vendor/samsung/r9q/proprietary/vendor/firmware/multical.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/multical.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/nfc/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/firmware/nfc/libsn100u_fw.so \
     vendor/samsung/r9q/proprietary/vendor/firmware/ois_mcu_stm32g_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/ois_mcu_stm32g_fw.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/s3908_r9.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/s3908_r9.bin \
     vendor/samsung/r9q/proprietary/vendor/firmware/s3908_r9_slsi.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/s3908_r9_slsi.bin \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b01 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b05 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b06 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b07 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b08 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b09 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b10 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b11 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b12 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b13 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b14 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b15 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b16 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b17 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b18 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.b19 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_1v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_1v_unsigned.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b01 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b05 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b06 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b07 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b08 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b09 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b10 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b11 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b12 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b13 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b14 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b15 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b16 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b17 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b18 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.b19 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_2v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_2v_unsigned.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b01 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b02 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b03 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b04 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b05:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b05 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b06:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b06 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b07:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b07 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b08:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b08 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b09:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b09 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b10:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b10 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b11:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b11 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b12:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b12 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b13:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b13 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b14:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b14 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b15:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b15 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b16:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b16 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b17:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b17 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b18:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b18 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.b19:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.b19 \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v.mdt \
+    vendor/samsung/r9q/proprietary/vendor/firmware/vpu20_4v_unsigned.mbn:$(TARGET_COPY_OUT_VENDOR)/firmware/vpu20_4v_unsigned.mbn \
+    vendor/samsung/r9q/proprietary/vendor/firmware/y792_o1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/y792_o1.bin \
     vendor/samsung/r9q/proprietary/vendor/lib/camera/com.qti.eeprom.irs2381c_polar.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.irs2381c_polar.so \
     vendor/samsung/r9q/proprietary/vendor/lib/camera/com.qti.eeprom.sec2qcconversion.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.sec2qcconversion.so \
     vendor/samsung/r9q/proprietary/vendor/lib/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib/camera/com.qti.eeprom.truly_cmb433.so \
@@ -144,17 +278,64 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/r9q/proprietary/vendor/lib/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.qcom.so \
     vendor/samsung/r9q/proprietary/vendor/lib/hw/camera.unihal.default.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/camera.unihal.default.so \
     vendor/samsung/r9q/proprietary/vendor/lib/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/com.qti.chi.override.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libDepthBokehVideo_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDepthBokehVideo_interface.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libDualCamBokehCapture.camera.samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib/libDualCamBokehCapture.camera.samsung.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_aieffectpk_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_aieffectpk_video.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_aieffectpk_video_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_aieffectpk_video_bokeh.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_aieffectpk_video_plight.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_aieffectpk_video_plight.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_dualcam_portraitlighting.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_dualcam_portraitlighting.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_dualcam_portraitlighting_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_dualcam_portraitlighting_preview.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_object_tracking.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_super_night_auto_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_super_night_auto_raw.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libarcsoft_video_super_night.so:$(TARGET_COPY_OUT_VENDOR)/lib/libarcsoft_video_super_night.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libbauthserver.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbauthserver.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libbauthtzcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbauthtzcommon.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera2ndk_vendor.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_nn_stub.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxexternalformatutils.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfacialfeatures.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxfdengine.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxfdengine.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxifestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxifestriping.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamximageformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamximageformatutils.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxqsatalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxqsatalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxstatscore.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxstatscore.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxswispiqmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxswispiqmodule.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxswprocessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxswprocessalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcamxtintlessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamxtintlessalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svacnn.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcapiv2svarnn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2svarnn.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcapiv2vop.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcom.qti.chinodeutils.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libdualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdualcam_refocus_image.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libdualcam_refocus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdualcam_refocus_video.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libegis_fp_normal_sensor_test.so:$(TARGET_COPY_OUT_VENDOR)/lib/libegis_fp_normal_sensor_test.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libgf_in_system_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib/libgf_in_system_lib.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libhdrdynamicootf.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhdrdynamicootf.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_bestats.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_bestats.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_cac3.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_cac3.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_faceproc2.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_lscv35.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_lscv35.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_mfnr.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmmcamera_mfnr_t4.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_mfnr_t4.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpbase.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libqfp_sensortest.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqfp_sensortest.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libremosaic_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib/libremosaic_wrapper.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libspeakercalibration.so:$(TARGET_COPY_OUT_VENDOR)/lib/libspeakercalibration.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib/libswregistrationalgo.so \
     vendor/samsung/r9q/proprietary/vendor/lib/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsynaFpSensorTestNwd.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_image_optical_zoom.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libtriplecam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_optical_zoom_control.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_video_optical_zoom.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libvdis.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdis.uniplugin@1.0.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libvdis_core.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdis_core.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libvdis_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvdis_interface.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/libvideoutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvideoutils.so \
     vendor/samsung/r9q/proprietary/vendor/lib/sensors.grip.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.grip.so \
     vendor/samsung/r9q/proprietary/vendor/lib/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib/sensors.ssc.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
+    vendor/samsung/r9q/proprietary/vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.camera.postproc@1.0.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.irs2381c_polar.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/camera/com.qti.eeprom.sec2qcconversion.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.sec2qcconversion.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/camera/com.qti.eeprom.truly_cmb433.so:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/com.qti.eeprom.truly_cmb433.so \
@@ -261,17 +442,65 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/r9q/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/hw/camera.unihal.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.unihal.default.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libDepthBokehVideo_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDepthBokehVideo_interface.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libDualCamBokehCapture.camera.samsung.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libDualCamBokehCapture.camera.samsung.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_aieffectpk_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_aieffectpk_video.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_aieffectpk_video_bokeh.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_aieffectpk_video_bokeh.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_aieffectpk_video_plight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_aieffectpk_video_plight.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_deflicker_native.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_deflicker_native.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_dualcam_portraitlighting.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_portraitlighting.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_dualcam_portraitlighting_preview.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_dualcam_portraitlighting_preview.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_object_tracking.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_object_tracking.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_super_night_auto_raw.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_super_night_auto_raw.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libarcsoft_video_super_night.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_video_super_night.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libbauthserver.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbauthserver.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libbauthtzcommon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbauthtzcommon.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamera2ndk_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera2ndk_vendor.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamera_nn_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamera_nn_stub.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxexternalformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxexternalformatutils.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxfacialfeatures.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfacialfeatures.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxfdalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxfdengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxfdengine.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxifestriping.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxifestriping.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamximageformatutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamximageformatutils.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxqsatalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxqsatalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxstatscore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxstatscore.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxswispiqmodule.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxswispiqmodule.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxswprocessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxswprocessalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcamxtintlessalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcamxtintlessalgo.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcapiv2svacnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2svacnn.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcapiv2svarnn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2svarnn.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcapiv2vop.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcapiv2vop.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libcom.qti.chinodeutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcom.qti.chinodeutils.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libdualcam_refocus_image.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_refocus_image.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libdualcam_refocus_video.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdualcam_refocus_video.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libegis_fp_normal_sensor_test.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libegis_fp_normal_sensor_test.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libgf_in_system_lib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgf_in_system_lib.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libhdrdynamic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamic.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libhdrdynamicootf.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdrdynamicootf.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_bestats.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_bestats.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_cac3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_cac3.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_faceproc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_faceproc2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_faceproc2.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_lscv35.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_lscv35.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_mfnr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_mfnr.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmmcamera_mfnr_t4.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmmcamera_mfnr_t4.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libmpbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmpbase.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libqfp_sensortest.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqfp_sensortest.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libremosaic_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaic_wrapper.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libremosaiclib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaiclib.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/libsynaFpSensorTestNwd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsynaFpSensorTestNwd.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_image_optical_zoom.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libtriplecam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_optical_zoom_control.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtriplecam_video_optical_zoom.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/libvdis.uniplugin@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvdis.uniplugin@1.0.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/nfc_nci_nxpsn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/nfc_nci_nxpsn.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/sensors.grip.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.grip.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.device@1.0.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so \
+    vendor/samsung/r9q/proprietary/vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.camera.postproc@1.0.so \
     vendor/samsung/r9q/proprietary/vendor/lib64/vendor.samsung.hardware.nfc@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.nfc@2.0.so
 
 PRODUCT_PACKAGES += \
